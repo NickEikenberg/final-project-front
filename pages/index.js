@@ -1,8 +1,12 @@
+import Header from '../src/components/Header/Header';
+import Home from '../src/components/Home/Home';
+
 const index = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Header />
+      <Home />
+    </>
   );
 };
 
