@@ -1,15 +1,15 @@
 import axios from 'axios';
 import Header from '../src/components/Header/Header';
 
-const search = () => {
+const Search = () => {
   const searchForHalo = () => {
     axios({
-      url: 'https://cors-anywhere.herokuapp.com/https://api.igdb.com/v4/games',
+      url: 'https://peaceful-tor-54406.herokuapp.com/https://api.igdb.com/v4/games',
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Client-ID': 'dmlu2pmbd2wc14ke1ooh3on7cmnxr9',
-        Authorization: 'Bearer h0635u8hgip4x6su7k8r8p98lmchsp',
+        'Client-ID': process.env.IGDB_CLIENT_ID,
+        Authorization: process.env.IGDB_AUTH_TOKEN,
       },
       data: 'fields name',
     })
@@ -26,4 +26,4 @@ const search = () => {
   );
 };
 
-export default search;
+export default Search;
