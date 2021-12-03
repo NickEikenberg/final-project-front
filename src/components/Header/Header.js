@@ -1,13 +1,13 @@
 import Searchbar from './Searchbar';
 
-const Header = () => {
+const Header = ({ searchData, setSearchData }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           GameCogs
         </a>
-        <Searchbar />
+        <Searchbar searchData={searchData} setSearchData={setSearchData} />
         <button
           className="navbar-toggler"
           type="button"

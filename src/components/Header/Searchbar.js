@@ -1,18 +1,18 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-const Searchbar = () => {
-  const [search, setSearch] = useState('');
+const Searchbar = ({ searchData, setSearchData }) => {
+  const [searchQuery, setSearchQuery] = useState('');
 
   const showSearch = (e) => {
-    setSearch(e.target.value);
+    setSearchQuery(e.target.value);
   };
 
   const searchForGame = (event) => {
     event.preventDefault();
 
     axios({
-      url: `https://peaceful-tor-54406.herokuapp.com/https://api.igdb.com/v4/games/?search=${search}&fields=id,name,summary`,
+      url: `https://peaceful-tor-54406.herokuapp.com/https://api.igdb.com/v4/games/?search=${searchQuery}&fields=name`,
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -21,7 +21,7 @@ const Searchbar = () => {
       },
       data: 'fields name;',
     })
-      .then((res) => console.log(res))
+      .then((res) => setSearchData(res.data))
       .catch((err) => console.log(err));
   };
 
@@ -30,10 +30,24 @@ const Searchbar = () => {
       <input
         className="form-control me-2"
         type="search"
-        placeholder="Search"
+        placeholder="Search for a game"
         aria-label="Search"
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => {
+          setSearchQuery(e.target.value);
+          searchForGame(e);
+        }}
+        list="datalistOptions"
+        id="datalist"
       />
+      <datalist id="datalistOptions">
+        {searchData.map((game, index) => {
+          return (
+            <>
+              <option value={game.name} key={index} />
+            </>
+          );
+        })}
+      </datalist>
       <button
         className="btn btn-outline-success"
         type="submit"
