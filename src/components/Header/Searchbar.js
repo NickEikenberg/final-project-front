@@ -6,8 +6,6 @@ const Searchbar = () => {
 
   const showSearch = (e) => {
     setSearch(e.target.value);
-
-    console.log(search);
   };
 
   const searchForGame = (event) => {
