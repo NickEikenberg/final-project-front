@@ -40,13 +40,14 @@ const Searchbar = ({ searchData, setSearchData }) => {
         id="datalist"
       />
       <datalist id="datalistOptions">
-        {searchData.map((game, index) => {
-          return (
-            <>
-              <option value={game.name} key={index} />
-            </>
-          );
-        })}
+        {searchData &&
+          searchData.map((game, index) => {
+            return (
+              <>
+                <option value={game.name} key={index} />
+              </>
+            );
+          })}
       </datalist>
       <button
         className="btn btn-outline-success"
