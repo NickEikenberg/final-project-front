@@ -12,14 +12,14 @@ const Searchbar = ({ searchData, setSearchData }) => {
     event.preventDefault();
 
     axios({
-      url: `https://peaceful-tor-54406.herokuapp.com/https://api.igdb.com/v4/games/?search=${searchQuery}&fields=name`,
+      url: `https://peaceful-tor-54406.herokuapp.com/https://api.igdb.com/v4/games/?search=${searchQuery}&fields=name,cover.*`,
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Client-ID': process.env.IGDB_CLIENT_ID,
         Authorization: process.env.IGDB_AUTH_TOKEN,
       },
-      data: 'fields name;',
+      data: 'fields name, cover.*;',
     })
       .then((res) => setSearchData(res.data))
       .catch((err) => console.log(err));
