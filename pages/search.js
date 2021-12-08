@@ -5,11 +5,10 @@ const Search = () => {
   const [searchData, setSearchData] = useState([]);
   const [games, setGames] = useState();
 
-  // const createGames = () => {
-
-  // }
-
-  const thumbTo1080 = (url) => url.replace('thumb', '1080p');
+  const thumbTo1080 = async (url) => {
+    let cover = await url;
+    await cover.replace('thumb', '1080p');
+  };
 
   useEffect(() => {
     console.log(searchData);
@@ -22,7 +21,7 @@ const Search = () => {
         {searchData.length > 0
           ? searchData.map((game, index) => {
               return (
-                <div className="card w-25" key={index}>
+                <div className="card border-light w-25 px-2" key={index}>
                   <img
                     src={thumbTo1080(game.cover.url)}
                     alt={game.name}

@@ -1,12 +1,13 @@
 import Searchbar from './Searchbar';
+import Link from 'next/link';
 
 const Header = ({ searchData, setSearchData }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          GameCogs
-        </a>
+        <Link href="/">
+          <a className="navbar-brand">GameCogs</a>
+        </Link>
         <Searchbar searchData={searchData} setSearchData={setSearchData} />
         <button
           className="navbar-toggler"
@@ -22,22 +23,14 @@ const Header = ({ searchData, setSearchData }) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
+              <a className="nav-link" href="#">
+                Marketplace
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Features
+                Community
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
             </li>
           </ul>
         </div>
