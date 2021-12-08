@@ -1,6 +1,7 @@
 import Header from '../src/components/Header/Header';
 import Home from '../src/components/Home/Home';
 import Trending from '../src/components/Trending/Trending';
+import Sold from '../src/components/SoldReleases/Sold';
 
 const index = () => {
   return (
@@ -8,6 +9,7 @@ const index = () => {
       <Header />
       <Home />
       <Trending />
+      <Sold />
     </>
   );
 };
