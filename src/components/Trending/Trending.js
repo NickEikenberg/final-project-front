@@ -31,7 +31,7 @@ const Trending = () => {
   return (
     <div className="bg-black text-white">
       <div className="container">
-        <h1>Trending Releases</h1>
+        <h1>Trending Games</h1>
         <div className="row">
           {trendingGames &&
             trendingGames.data.slice(1, 4).map((game) => {
@@ -41,24 +41,12 @@ const Trending = () => {
             })}
         </div>
         <div className="row">
-          <Game
-            name={'Madden'}
-            img={
-              'https://www.dualshockers.com/static/uploads/2017/09/halo-3.jpg'
-            }
-          />
-          <Game
-            name={'Sonic'}
-            img={
-              'https://www.dualshockers.com/static/uploads/2017/09/halo-3.jpg'
-            }
-          />
-          <Game
-            name={'Mario'}
-            img={
-              'https://www.dualshockers.com/static/uploads/2017/09/halo-3.jpg'
-            }
-          />
+          {trendingGames &&
+            trendingGames.data.slice(4, 7).map((game) => {
+              return (
+                <Game key={game.id} name={game.name} img={game.box_art_url} />
+              );
+            })}
         </div>
       </div>
     </div>
