@@ -61,7 +61,7 @@ const Banner = () => {
             alt="..."
           />
           <div className="card-img-overlay">
-            <p className="card-text">This is a wider card with supporting</p>
+            <p className="card-text"></p>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ const Banner = () => {
             alt="..."
           />
           <div className="card-img-overlay">
-            <p className="card-text">This is a wider card with supporting</p>
+            <p className="card-text"></p>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ const Banner = () => {
             alt="..."
           />
           <div className="card-img-overlay">
-            <p className="card-text">This is a wider card with supporting</p>
+            <p className="card-text"></p>
           </div>
         </div>
       </div>
