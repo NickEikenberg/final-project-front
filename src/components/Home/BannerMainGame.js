@@ -45,7 +45,7 @@ const BannerMainGame = ({ name }) => {
         />
 
         <div className="card-body">
-          <h5 className="card-title">Today's Spotlight: {mainGame.name}</h5>
+          <h5 className="card-title">Todays Spotlight: {mainGame.name}</h5>
           <p className="card-text">{mainGame.summary}</p>
         </div>
       </div>
