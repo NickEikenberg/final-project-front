@@ -49,13 +49,14 @@ const Searchbar = ({ searchData, setSearchData }) => {
             );
           })}
       </datalist>
-      <button
+      <a
         className="btn btn-outline-success"
-        type="submit"
-        onClick={searchForGame}
+        // type="submit"
+        // onClick={searchForGame}
+        href="/search"
       >
         Search
-      </button>
+      </a>
     </form>
   );
 };
