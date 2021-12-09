@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const BannerGame = () => {
+const BannerGame = ({ name }) => {
   let [mainGame, setMainGame] = useState({
     name: '',
     summary: '',
@@ -9,8 +9,7 @@ const BannerGame = () => {
   });
 
   useEffect(() => {
-    let data =
-      'fields name, summary, cover.url;\nwhere name = "Metal Gear Solid";\n';
+    let data = `fields name, summary, cover.url;\nwhere name = "${name}";\n`;
 
     let config = {
       method: 'post',
@@ -46,8 +45,7 @@ const BannerGame = () => {
         />
 
         <div className="card-body">
-          <h5 className="card-title">Today's Spotlight: {mainGame.name}</h5>
-          <p className="card-text">{mainGame.summary}</p>
+          <h5 className="card-title">Recently Sold: {mainGame.name}</h5>
         </div>
       </div>
     </div>

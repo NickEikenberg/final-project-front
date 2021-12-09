@@ -41,33 +41,15 @@ const Banner = () => {
   return (
     <div className="card-group text-white row">
       <div className="col">
-        <BannerMainGame />
+        <BannerMainGame name={'Metal Gear Solid 3: Snake Eater'} />
       </div>
 
       <div className="card-group text-white col-4 flex-column">
-        <BannerGame />
+        <BannerGame name={'Portal'} />
 
-        <div className="card bg-dark text-white">
-          <img
-            src="https://www.dualshockers.com/static/uploads/2017/09/halo-3.jpg"
-            className="card-img"
-            alt="..."
-          />
-          <div className="card-img-overlay">
-            <p className="card-text"></p>
-          </div>
-        </div>
+        <BannerGame name={'Disco Elysium'} />
 
-        <div className="card bg-dark text-white">
-          <img
-            src="https://www.dualshockers.com/static/uploads/2017/09/halo-3.jpg"
-            className="card-img"
-            alt="..."
-          />
-          <div className="card-img-overlay">
-            <p className="card-text"></p>
-          </div>
-        </div>
+        <BannerGame name={'Haunting Ground'} />
       </div>
     </div>
   );

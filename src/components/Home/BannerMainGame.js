@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const BannerMainGame = () => {
+const BannerMainGame = ({ name }) => {
   let [mainGame, setMainGame] = useState({
     name: '',
     summary: '',
@@ -9,8 +9,7 @@ const BannerMainGame = () => {
   });
 
   useEffect(() => {
-    let data =
-      'fields name, summary, cover.url;\nwhere name = "Metal Gear Solid";\n';
+    let data = `fields name, summary, cover.url;\nwhere name = "${name}";\n`;
 
     let config = {
       method: 'post',
