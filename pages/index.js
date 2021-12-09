@@ -5,12 +5,14 @@ import Sold from '../src/components/SoldReleases/Sold';
 
 const index = () => {
   return (
-    <>
-      <Header />
-      <Home />
-      <Trending />
+    <div>
+      <div className="bg-black">
+        <Header />
+        <Home />
+        <Trending />
+      </div>
       <Sold />
-    </>
+    </div>
   );
 };
 

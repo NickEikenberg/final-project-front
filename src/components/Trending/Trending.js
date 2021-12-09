@@ -29,7 +29,7 @@ const Trending = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white py-5">
       <div className="container">
         <h1>Trending Games</h1>
         <div className="row">

@@ -30,12 +30,12 @@ const Sold = () => {
 
   return (
     <div>
-      <div className="">
+      <div className="py-5">
         <div className="container">
           <h1>Most Expensive Games Sold This Month</h1>
           <div className="row">
             {trendingGames &&
-              trendingGames.data.slice(1, 4).map((game) => {
+              trendingGames.data.slice(10, 13).map((game) => {
                 return (
                   <Game key={game.id} name={game.name} img={game.box_art_url} />
                 );
@@ -43,7 +43,7 @@ const Sold = () => {
           </div>
           <div className="row">
             {trendingGames &&
-              trendingGames.data.slice(4, 7).map((game) => {
+              trendingGames.data.slice(14, 17).map((game) => {
                 return (
                   <Game key={game.id} name={game.name} img={game.box_art_url} />
                 );
