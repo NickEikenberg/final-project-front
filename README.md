@@ -1,4 +1,6 @@
-# GameCogs, a marketplace/discography for used video games
+# GameCogs
+
+## A marketplace/discography for used video games
 
 GameCogs is a marketplace for used games, inspired by the popular music discography site Discogs.
 
