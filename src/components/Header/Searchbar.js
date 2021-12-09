@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Searchbar = ({ searchData, setSearchData }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -49,14 +50,14 @@ const Searchbar = ({ searchData, setSearchData }) => {
             );
           })}
       </datalist>
-      <a
-        className="btn btn-outline-success"
+      <Link
+        className="btn btn-outline-success text-decoration-none"
         // type="submit"
         // onClick={searchForGame}
         href="/search"
       >
         Search
-      </a>
+      </Link>
     </form>
   );
 };
